@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="theme.css" id="themeStylesheet" />
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -49,6 +49,9 @@
         </li>
         <li>
           <h6>K-Series Web Extensions Demo v1.6.17</h6>
+        </li>
+        <li>
+          <button id="themeToggle" class="btn btn-outline-secondary btn-sm" type="button">Switch to Light</button>
         </li>
       </ul>
     </nav>
@@ -2197,6 +2200,38 @@
         pos_close();
         $('.alert').alert();
       });
+
+      // THEME TOGGLER
+      (function() {
+        const THEME_KEY = 'ls-theme';
+        const linkEl = document.getElementById('themeStylesheet');
+        const btn = document.getElementById('themeToggle');
+        if (!linkEl || !btn) return;
+
+        function applyTheme(theme) {
+          if (theme === 'light') {
+            linkEl.setAttribute('href', 'theme-light.css');
+            btn.textContent = 'Switch to Dark';
+            btn.classList.remove('btn-outline-secondary');
+            btn.classList.add('btn-outline-primary');
+          } else {
+            linkEl.setAttribute('href', 'theme.css');
+            btn.textContent = 'Switch to Light';
+            btn.classList.remove('btn-outline-primary');
+            btn.classList.add('btn-outline-secondary');
+          }
+        }
+
+        const saved = localStorage.getItem(THEME_KEY) || 'dark';
+        applyTheme(saved);
+
+        btn.addEventListener('click', function() {
+          const current = linkEl.getAttribute('href').includes('theme-light.css') ? 'light' : 'dark';
+          const next = current === 'light' ? 'dark' : 'light';
+          localStorage.setItem(THEME_KEY, next);
+          applyTheme(next);
+        });
+      })();
     </script>
   </body>
 
