@@ -787,7 +787,7 @@
 
                       @param {string} number
 
-                      Reference number used to identify the account to load.                      
+                      Reference number used to identify the account to load.
                       </code>
                     </pre>
                   </p>
@@ -841,7 +841,7 @@
 
                       @param {string} name
 
-                      Reference name used to identify the account to load.                    
+                      Reference name used to identify the account to load.
                       </code>
                     </pre>
                   </p>
@@ -894,7 +894,7 @@
                       Adds the specified item to the current account.
 
                       @param {string} itemId
-                      Reference identifier used to identify the item to add.                                  
+                      Reference identifier used to identify the item to add.
                       </code>
                     </pre>
                   </p>
@@ -973,7 +973,7 @@
                       The price of the item to add in cents.
 
                       @param {string} name
-                      The name of the item to add.          
+                      The name of the item to add.
                       </code>
                     </pre>
                   </p>
@@ -1155,7 +1155,7 @@
                       <code class="language-javascript text-white">
                         /**
                           * Link a table with the current account.
-                          * 
+                          *
                           * @param {string} tableNumber Table name used to link with the current account.
                           * @param {posCallback} callback The callback that'll be invoked when the native function is done executing.
                           */
@@ -1216,7 +1216,7 @@
                       <code class="language-javascript text-white">
                         /**
                           * Check if the table has an open account associated with it.
-                          * 
+                          *
                           * @param {string} tableNumber Table name used to link with the current account.
                           * @param {posCallback} callback The callback that'll be invoked when the native function is done executing.
                           */
@@ -1283,7 +1283,7 @@
                       Changes the profile of the current account.
 
                       @param {string} accountProfileCode
-                      Reference code used to identify the account profile.                      
+                      Reference code used to identify the account profile.
                       </code>
                     </pre>
                   </p>
@@ -1321,7 +1321,7 @@
                       Fetches the currently configured available discounts.
                       
                       @param {posCallback} callback
-                      The callback that will be invoked when the native function is done executing.                      
+                      The callback that will be invoked when the native function is done executing.
                       </code>
                     </pre>
                   </p>
@@ -1445,7 +1445,7 @@
                       Reference code used to identify the discount to toggle.
                       
                       @param {posCallback} callback
-                      The callback that will be invoked when the native function is done executing.                      
+                      The callback that will be invoked when the native function is done executing.
                       </code>
                     </pre>
                   </p>
@@ -1518,7 +1518,7 @@
                       Reference code used to identify the payment method to use when adding the payment.
                       
                       @param {posCallback} callback
-                      The callback that will be invoked when the native function is done executing.                    
+                      The callback that will be invoked when the native function is done executing.
                       </code>
                     </pre>
                   </p>
@@ -1599,7 +1599,7 @@
                            }
                        
                            pos_postMessage(data)
-                       }                  
+                       }
                       </code>
                     </pre>
                   </p>
@@ -1658,7 +1658,7 @@
                       Reference code used to identify the payment method to use when paying for the current account.
                       
                       @param {posCallback} callback
-                      The callback that will be invoked when the native function is done executing.  
+                      The callback that will be invoked when the native function is done executing.
                       </code>
                     </pre>
                   </p>
@@ -1702,7 +1702,7 @@
                       <code class="language-javascript text-white">
                         /**
                           * Prints out the specified text.
-                          * 
+                          *
                           * @param {string} text The text to print out.
                           */
                           function pos_printText(text) {
@@ -1767,7 +1767,7 @@
                       <code class="language-javascript text-white">
                         /**
                           * Adds an external reference with the specified prefix.
-                          * 
+                          *
                           * @param {string} reference The reference to add.
                           * @param {string} prefix The prefix to concatenate.
                           */
@@ -1820,7 +1820,7 @@
                       <code class="language-javascript text-white">
                         /**
                           * Stores data in the POS app's defaults using the specified key.
-                          * 
+                          *
                           * @param {string} key The key to use to store the data.
                           * @param {string} value The data to store.
                           */
@@ -1866,7 +1866,7 @@
                       <code class="language-javascript text-white">
                         /**
                         * Loads data from the POS app's defaults using the specified key.
-                        * 
+                        *
                         * @param {string} key The key to use to retrieve the data.
                         * @param {posCallback} callback The callback that'll be invoked when the native function is done executing.
                         */
@@ -2005,7 +2005,7 @@
 
       //POS NATIVE FUNCTIONS
 
-      //On Barcode Scan 
+      //On Barcode Scan
       var onBarcodeScanEvent = function () {
         pos_onBarcodeScanEvent((result) => {
           document.getElementById('pos_onBarcodeScanEvent_result').innerHTML = result.data;
@@ -2013,7 +2013,7 @@
         });
       };
 
-      //On NFC Scan 
+      //On NFC Scan
       var onNFCEvent = function () {
         pos_onNFCEvent((result) => {
           document.getElementById('pos_onNFCScanEvent_result').innerHTML = result.data;
