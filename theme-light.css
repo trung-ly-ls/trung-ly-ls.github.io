@@ -1,17 +1,17 @@
 :root {
-  --bg: #f5f7fb;
-  --surface: #ffffff;
-  --surface-2: #f5f7fb;
-  --card: #ffffff;
-  --text: #0b1220;
-  --muted: #4b5565;
-  --brand: #2e61de;
-  --brand-2: #1e3a8a;
-  --accent: #0ea5e9;
-  --danger: #dc2626;
-  --warning: #b45309;
-  --success: #15803d;
-  --border: #e5e7eb;
-  --shadow: 0 8px 20px rgba(0,0,0,0.08);
-  --radius: 14px;
+  --bg: #f7f9ff;              /* airy blue-tinted background */
+  --surface: #ffffff;         /* crisp white surfaces */
+  --surface-2: #f0f5ff;       /* light indigo-tinted panels */
+  --card: #ffffff;            /* cards remain white for contrast */
+  --text: #0b1220;            /* deep ink text */
+  --muted: #415a77;           /* cool desaturated slate */
+  --brand: #2e61de;           /* primary brand blue */
+  --brand-2: #1d4ed8;         /* deeper brand accent */
+  --accent: #06b6d4;          /* vibrant cyan accent */
+  --danger: #e11d48;          /* vivid rose/red */
+  --warning: #f59e0b;         /* warm amber */
+  --success: #16a34a;         /* lively green */
+  --border: #d7e0f5;          /* soft indigo-tinted border */
+  --shadow: 0 10px 24px rgba(30, 58, 138, 0.12); /* soft indigo shadow */
+  --radius: 14px;             /* consistent rounding */
 }
